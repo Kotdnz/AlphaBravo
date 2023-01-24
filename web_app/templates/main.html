@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+   <title>AlphaBravo</title>
+   <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+   <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}" ></script>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="refresh" content="60">
+</head>
+
+<h2 style="text-align: center;">Стрілкова позіція № {{ position | int + 1 }}</h2>
+<table style="width: 100%; border-collapse: collapse;" border="0">
+<tbody>
+   <tr>
+      <td style="width: 45%; text-align: center; height: 20% "><a class="btn btn-block btn-lg 
+         {% if shot[0] != 0 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/0/hit">№1 влучання</a></td>
+      <td style="width: 3%; text-align: center; height: 20%;">&nbsp;</td>
+      <td style="width: 45%; text-align: center; height: 20%"><a class="btn btn-block btn-lg 
+         {% if shot[0] != 1 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/0/miss">№1 промах</a></td>
+   </tr>
+   <tr>
+      <td style="width: 1%; text-align: center;" colspan="3">&nbsp;</td>
+   </tr>
+   <tr>
+      <td style="width: 45%; text-align: center; height: 20% "><a class="btn btn-block btn-lg 
+         {% if shot[1] != 0 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/1/hit">№2 влучання</a></td>
+      <td style="width: 3%; text-align: center; height: 20%;">&nbsp;</td>
+      <td style="width: 45%; text-align: center; height: 20%"><a class="btn btn-block btn-lg 
+         {% if shot[1] != 1 %} btn-primary {% else %} btn-default {% endif %}"  
+         role="button" href="/shot/1/miss">№2 промах</a></td>
+   </tr>
+   <tr>
+      <td style="width: 1%; text-align: center;" colspan="3">&nbsp;</td>
+   </tr>
+   <tr>
+      <td style="width: 45%; text-align: center; height: 20% "><a class="btn btn-block btn-lg 
+         {% if shot[2] != 0 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/2/hit">№3 влучання</a></td>
+      <td style="width: 3%; text-align: center; height: 20%;">&nbsp;</td>
+      <td style="width: 45%; text-align: center; height: 20%"><a class="btn btn-block btn-lg 
+         {% if shot[2] != 1 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/2/miss">№3 промах</a></td>
+   </tr>
+   <tr>
+      <td style="width: 1%; text-align: center;" colspan="3">&nbsp;</td>
+   </tr>
+   <tr>
+      <td style="width: 45%; text-align: center; height: 20% "><a class="btn btn-block btn-lg 
+         {% if shot[3] != 0 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/3/hit">№4 влучання</a></td>
+      <td style="width: 3%; text-align: center; height: 20%;">&nbsp;</td>
+      <td style="width: 45%; text-align: center; height: 20%"><a class="btn btn-block btn-lg 
+         {% if shot[3] != 1 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/3/miss">№4 промах</a></td>
+   </tr>
+   <tr>
+      <td style="width: 1%; text-align: center;" colspan="3">&nbsp;</td>
+   </tr>
+   <tr>
+      <td style="width: 45%; text-align: center; height: 20% "><a class="btn btn-block btn-lg 
+         {% if shot[4] != 0 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/4/hit">№5 влучання</a></td>
+      <td style="width: 3%; text-align: center; height: 20%;">&nbsp;</td>
+      <td style="width: 45%; text-align: center; height: 20%"><a class="btn btn-block btn-lg 
+         {% if shot[4] != 1 %} btn-primary {% else %} btn-default {% endif %}" 
+         role="button" href="/shot/4/miss">№5 промах</a></td>
+   </tr>
+   <tr>
+      <td style="width: 1%; text-align: center;" colspan="3">&nbsp;</td>
+   </tr>
+<tr>
+   <td style="width: 50%; text-align: center;height: 20%;" colspan="3"><a class="btn btn-block btn-lg btn-primary" role="button" href="/shot/0/reset">Скинути всi результати</a></td>
+</tr>
+</tbody>
+</table>
+<pre style="text-align: right;">(c) AlphaBravo</pre>
